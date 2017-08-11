@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<input type="text" name="title" id="title" placeholder="title"><br><br>
+<input type="text" name="" id="link" placeholder="link"><br>
+
+
+<button onclick="up()">upload</button>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAixbDUFcsIGvuDJGiWqqxrpQN4Jdkemec",
+    authDomain: "hairstyles-ed82f.firebaseapp.com",
+    databaseURL: "https://hairstyles-ed82f.firebaseio.com",
+    projectId: "hairstyles-ed82f",
+    storageBucket: "hairstyles-ed82f.appspot.com",
+    messagingSenderId: "862288762723"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">
+ 
+
+var up = () => {
+	
+var l = document.getElementById('link').value;
+var t = document.getElementById('title').value;
+add(l,t);
+}
+
+
+
+
+
+	function add(link,title){
+var database = firebase.database();
+var ref = database.ref('men');
+var result = ref.push({
+	title:title,
+	link:link
+});
+}
+
+</script>
+
+
+
+
+</body>
+</html>
