@@ -7,14 +7,25 @@
 </ion-header>
 
 <ion-content>
- <ion-list *ngFor="let i of items">
-  <ion-item>
-    <ion-thumbnail item-start>
-      <img src="{{i.link}}">
-    </ion-thumbnail>
-    <h5>{{i.title}}</h5>
-    
-    <button ion-button (click)="view(i.title,i.link)" item-end>View</button>
+  <ion-list *ngFor="let i of items">
+  <ion-card color="primary">
+
+   <ion-card-content>
+   <ion-item color="primary">
+     <ion-thumbnail item-start>
+       <img src="{{i.link}}">
+     </ion-thumbnail>
+      <button ion-button (click)="view(i.title,i.link)" color="dark" item-end>View</button>
   </ion-item>
-</ion-list>
+  </ion-card-content>
+       <ion-card-header>
+     {{i.title}}
+   </ion-card-header>
+
+  </ion-card>
+  </ion-list>
+
+
+
+
 </ion-content>

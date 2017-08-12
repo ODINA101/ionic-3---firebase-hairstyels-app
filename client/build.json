@@ -1,0 +1,18 @@
+{
+     "android": {
+         "debug": {
+             "keystore": "cert.keystore",
+             "storePassword": "paroli123",
+             "alias": "1",
+             "password" : "paroli123",
+             "keystoreType": ""
+         },
+         "release": {
+             "keystore": "cert.keystore",
+             "storePassword": "paroli123",
+             "alias": "1",
+             "password" : "paroli123",
+             "keystoreType": ""
+         }
+     }
+ }
